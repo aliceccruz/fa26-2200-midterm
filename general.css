@@ -70,7 +70,11 @@ nav {
 #logo {
     display: flex;
     align-content: center;
-    margin-left: 10px;
+}
+
+.btu_lab {
+    position: relative;
+    left: -50px;
 }
 
 nav ul {
