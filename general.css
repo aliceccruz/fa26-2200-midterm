@@ -74,7 +74,8 @@ nav {
 
 .btu_lab {
     position: relative;
-    left: -50px;
+    top: 25%;
+    left: 10%;
 }
 
 nav ul {
@@ -99,6 +100,8 @@ nav a:hover {
 
 header > h1 {
     grid-area: title;
+    position: relative;
+    top: 15%;
     text-transform: uppercase;
     font-size: 0, 100%;
     display: flex;
