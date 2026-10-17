@@ -49,6 +49,7 @@ nav, section, footer, .color_code {
     border-color: var(--color-neutral);
     border-radius: var(--radius-md);
     margin: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 header {
@@ -73,14 +74,45 @@ nav {
     margin-left: 1em;
 }
 
-.btu_lab {
+.btu_title {
     position: relative;
     top: 25%;
     left: 10%;
 }
 
-nav ul {
-    list-style-type: none;
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+  color: var(--color-neutral);
+  padding: 1em;
+  margin-right: 1em;
+  box-sizing: border-box;
+  width: 12em;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-color: var(--color-background);
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 12em;
+  background-color: var(--color-background);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+    font-weight: bold;
+    border-color: var(--color-neutral);
+    background-color: var(--color-highlight);
 }
 
 nav a {
@@ -159,47 +191,5 @@ header > h1 {
 
 nav a:visited {
     color: var(--color-neutral);
-}
-
-.dropdown {
-  position: relative;
-}
-
-/* Style the dropdown button */
-.dropbtn {
-  color: var(--color-neutral);
-  padding: 1em;
-  margin-right: 1em;
-  box-sizing: border-box;
-  height: 100%;
-  border-left: 2px solid;
-  border-right: 2px solid;
-  border-color: var(--color-background);
-  cursor: pointer;
-}
-
-/* Dropdown content */
-.dropdown-content {
-  display: block;
-  position: absolute;
-  background-color: var(--color-background);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1
-}
-
-/* Show the dropdown content on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change background color of dropdown button on hover */
-.dropdown:hover .dropbtn {
-    font-weight: bold;
-    border-color: var(--color-neutral);
-    background-color: var(--color-highlight);
 }
 
