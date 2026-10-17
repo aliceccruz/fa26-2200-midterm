@@ -5,7 +5,7 @@
     --color-primary: #002382; /* True Cobalt - Main Brand Color */
     --color-secondary: #007C8A;   /* Teal - Complementary Action Color */
     --color-accent: #B64377;  /* Berry Crush - Highlight / Warning Color */
-    --color-neutral: #1B1B1E; /* Carbon Black - Neutral Text and Background */
+    --color-neutral: #1B1B2f; /* Carbon Black - Neutral Text and Background */
     --color-highlight: #F9C80E;   /* Bright Amber - Accent / Attention Color */
 
 /* Space-Specific Colors */
@@ -18,7 +18,8 @@
     --color-cnc:#275eaa;
 
 /* Derived Colors for Flexibility */
-    --color-background: color-mix(in srgb, var(--color-neutral) 10%, white);
+    --color-background: color-mix(in srgb, var(--color-neutral) 20%, white);
+    --color-shadow: rgba(27,27,30,0.25);
     --color-text-dark: var(--color-neutral);
     --color-text-light: white;
 
@@ -48,36 +49,43 @@ nav, section, footer, .color_code {
     border: 2px solid;
     border-color: var(--color-neutral);
     border-radius: var(--radius-md);
-    margin: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-header {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-areas: 
-        "nav nav nav"
-        "title . colors";
+    box-shadow: 0px 8px 16px 0px var(--color-shadow);
 }
 
 nav {
-    grid-area: nav;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-    width: auto;
+    top: 10px;
+    position: sticky;
 }
 
 #logo {
     display: flex;
-    align-content: center;
+    align-items: center;
+    
+    font-size: 1.5em;
+    color: var(--color-neutral);
+    text-decoration: none;
+    
     margin-left: 1em;
+    padding: 10px 10px;
+    
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: var(--color-background);
 }
 
-.btu_title {
-    position: relative;
-    top: 25%;
-    left: 10%;
+#logo > div {   
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;
+}
+
+.dropdowns{
+    display: flex;
+    justify-content: flex-end;
+    
+    margin-right: 1em;
 }
 
 .dropdown {
@@ -85,24 +93,34 @@ nav {
 }
 
 .dropbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 1.5em;
   color: var(--color-neutral);
+  
   padding: 1em;
-  margin-right: 1em;
+  
   box-sizing: border-box;
-  width: 12em;
   height: 100%;
+  
   border-left: 2px solid;
   border-right: 2px solid;
   border-color: var(--color-background);
+  
   cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: absolute;
-  min-width: 12em;
+  width: auto;
   background-color: var(--color-background);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px var(--color-shadow);
 }
 
 .dropdown:hover .dropdown-content {
@@ -115,7 +133,7 @@ nav {
     background-color: var(--color-highlight);
 }
 
-nav a {
+nav  .dropdown  a {
     display: block;
     text-decoration: none;
     color: var(--color-neutral);
@@ -132,18 +150,99 @@ nav a:hover {
     border-color: var(--color-neutral);
 }
 
-header > h1 {
-    grid-area: title;
-    position: relative;
-    top: 15%;
-    text-transform: uppercase;
-    font-size: 0, 100%;
-    display: flex;
-    justify-content: center;
+header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas: 
+        ". title . colors";
+
+    margin: 1em 0;
 }
 
-.color_code {
+header  h1 {
+    grid-area: title;
+    display: block;
+    height: fit-content;
+    margin-block: 0;
+    text-transform: uppercase;
+    font-size: 5em;
+}
+
+header h2 {
+    margin-block: 0px;
     grid-area: colors;
+}
+
+header h2 p {
+    margin: 1em;
+}
+
+main {
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+    grid-template-columns: 2fr 1.25fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "description description description"
+        "use img equipment";
+
+    margin: 1em 0;
+}
+
+#description {
+    grid-area: description;
+}
+
+main img {
+    grid-area: img;
+
+    width: 100%;
+
+    border: 2px solid;
+    border-color: var(--color-neutral);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 8px 16px 0px var(--color-shadow);
+}
+
+#use {
+    grid-area: use;
+}
+
+#equipment {
+    grid-area: equipment;
+}
+
+main h2 {
+    display: inline-block;
+    padding: 5px 8px;
+    padding-left: 1em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--color-neutral);
+}
+
+main p, footer p {
+    padding: 0 1em;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+}
+
+#equipment div {
+
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    margin-bottom: 1em;
+}
+
+#equipment p {
+    display: block;
+    width: fit-content;
+    margin-block: 8px;
 }
 
 /* Page specific */
@@ -152,13 +251,7 @@ header > h1 {
 }
 
 .tools_main h2 {
-    display: inline-block;
-    padding: 5px 8px;
-    padding-left: 2em;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     color: var(--color-tools);
-    background-color: var(--color-neutral);
 }
 
 #tool_nav:hover {
