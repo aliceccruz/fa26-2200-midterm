@@ -254,7 +254,7 @@ main p, footer p {
     color: var(--color-tools);
 }
 
-#tool_nav:hover {
+#tools_nav:hover {
     background-color: var(--color-tools);
 }
 

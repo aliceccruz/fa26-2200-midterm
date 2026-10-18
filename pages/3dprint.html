@@ -3,57 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Printers</title>
+    <title>BTU Lab | 3D Printers</title>
     <link rel="icon" type="image/x-icon" href="/img/btulablogo.png">
+    <link rel="stylesheet" href="../3dprint.css">
 </head>
-<body class="3dprint_body">
-    <header>
+<body class="print_body">
         <nav>
             <a href="../index.html" id="logo">
                 <img src="../img/btulablogo.png" alt="website logo" height="100px">  
-                <span class = "btu_lab"> ATLAS | BTU Lab </span>
+                <div> ATLAS | BTU Lab </div>
             </a>
             
-            <div>
-                <ul>
-                    <li><a aria-current="true" id="tool_nav">Tools</a></li>
-                    <li><a href="woodShop.html" id="wood_nav">Wood Shop</a></li>
-                    <li><a href="sewing.html" id="sew_nav">Sewing & Textiles</a></li>
-                    <li><a href="electronics.html" id="electric_nav">Electronics</a></li>
-                    <li><a href="lasers.html" id="laser_nav">Lasers!</a></li>
-                    <li><a href="3dprint.html" id="print_nav">3D Printers</a></li>
-                    <li><a href="cnc.html" id="cnc_nav">CNC</a></li>
-                </ul>
+            <div class="dropdowns">
+                <div class="dropdown">
+                    <div class="dropbtn">Spaces</div>
+                    <div class="dropdown-content">
+                        <a href="woodShop.html" id="wood_nav">Wood Shop</a>
+                        <a href="sewing.html" id="sew_nav">Sewing & Textiles</a>
+                        <a href="electronics.html" id="electric_nav">Electronics</a>
+                        <a href="lasers.html" id="laser_nav">Lasers!</a>
+                        <a aria-current="3dprint.html" id="print_nav">3D Printers</a>
+                        <a href="cnc.html" id="cnc_nav">CNC</a>
+                        <a href="tools.html" id="tools_nav">Tools</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropbtn">More</div>
+                <div class="dropdown-content">
+                    <a href="BTUrules">Rules and Policies</a>
+                    <a href="#">Calendar</a>
+                    <a href="mischief.html">Mischief Makers</a>
+                    <a href="staff.html">Faculty</a>
+                </div>
+            </div>
             </div>
         </nav>
 
-        <h1><strong style="color: #bf369f;">3D Printers</strong></h1>
-        <h2>3D Printing equiment is labeled <strong style="color: #bf369f;">PURPLE</strong></h2>
-        <p>
-            <ul>
-                <li><strong style="color: #bf369f;">FACULTY:  </strong>Class assignments requiring 3D printing should be coordinated by LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu"> zack.weaver@colorado.edu</a>)</li>
-                <li><strong style="color: #bf369f;">STUDENTS: </strong>Assistance with 3D Printing for class assignments should be coordinated with class LAs or TAs <em>first</em>, then "BTU Mischief Makers", if available.
-                <li><strong style="color: #bf369f;">EVERYBODY: </strong>3D printing hardware/software update frequently! Make sure you stay up to date, too.</li>
-                </li>
-            </ul>
-        </p>
-    </header>
+        <header>
+            <h1><strong>3D Printers</strong></h1>
+            <h2 class="color_code">
+                <p>3D Printing equiment is labeled <strong style="color: #bf369f;">PURPLE</strong></p>
+            </h2>
+        </header>
 
-    <main>
-        <section id="Description">
-            <h2><strong style="color: #bf369f;">The revolution will be printed...</strong></h2>
-        </section>
-
- 
-        
-        <section id="use">
-            <p>3D Printers located in the main space are for <strong><em>intended use only!</em></strong> Additional 3D printers are available for experimentation. Contact a <a href="mischiefmakers.html">Mischief Maker</a> to set it up. We got you!</p>
-            <p>3D Printing is also the subject of some workshops. See workshops on the <a href="calendar.html">BTU Lab Calendar.</a></p>
-            <p>Jobs are run on a first-come-first-served basis<strong style="color: #bf369f;">***</strong>.</p>
-            <p>! PRUSA SLICER software is provided and required !</p>
+    <main class="print_main">
+        <section id="description">
+            <p>
+                <ul>
+                    <li><strong style="color: #bf369f;">FACULTY:  </strong>Class assignments requiring 3D printing should be coordinated by LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu"> zack.weaver@colorado.edu</a>)</li>
+                    <li><strong style="color: #bf369f;">STUDENTS: </strong>Assistance with 3D Printing for class assignments should be coordinated with class LAs or TAs <em>first</em>, then "BTU Mischief Makers", if available.
+                    <li><strong style="color: #bf369f;">EVERYBODY: </strong>3D printing hardware/software update frequently! Make sure you stay up to date, too.</li>
+                    </li>
+                </ul>
+            </p>
         </section>
 
         <img width="200" src="../img/3dprint.jpeg" alt="Image of 3D printers" id="center_img">
+
+        <section id="use">
+            <h2><strong style="color: #bf369f;">The revolution will be printed...</strong></h2>
+                <p>3D Printers located in the main space are for <strong><em>intended use only!</em></strong> Additional 3D printers are available for experimentation. Contact a <a href="mischiefmakers.html">Mischief Maker</a> to set it up. We got you!</p>
+                <p>3D Printing is also the subject of some workshops. See workshops on the <a href="calendar.html">BTU Lab Calendar.</a></p>
+                <p>Jobs are run on a first-come-first-served basis<strong style="color: #bf369f;">***</strong>.</p>
+                <p>! PRUSA SLICER software is provided and required !</p>
+        </section>
 
         <section id="intended">
             <h2><strong style="color: #bf369f;">"Intended" Use pf BTU Lab 3D Printers</strong></h2>
