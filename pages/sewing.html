@@ -5,39 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTU Lab | Sewing & Textiles</title>
     <link rel="icon" type="image/x-icon" href="/img/btulablogo.png">
+    <link rel="stylesheet" href="../sewing.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="../index.html" id="logo">
-                <img src="../img/btulablogo.png" alt="website logo" height="100px">  
-                <span class = "btu_lab"> ATLAS | BTU Lab </span>
-            </a>
-            
-            <div>
-                <ul>
-                    <li><a aria-current="true" id="tool_nav">Tools</a></li>
-                    <li><a href="woodShop.html" id="wood_nav">Wood Shop</a></li>
-                    <li><a href="sewing.html" id="sew_nav">Sewing & Textiles</a></li>
-                    <li><a href="electronics.html" id="electric_nav">Electronics</a></li>
-                    <li><a href="lasers.html" id="laser_nav">Lasers!</a></li>
-                    <li><a href="3dprint.html" id="print_nav">3D Printers</a></li>
-                    <li><a href="cnc.html" id="cnc_nav">CNC</a></li>
-                </ul>
+
+<body class="sew_body">
+    <nav>
+        <a href="../index.html" id="logo">
+            <img src="../img/btulablogo.png" alt="website logo" height="50px">  
+            <div> ATLAS | BTU Lab </div>
+        </a>
+        
+        <div class="dropdowns">
+        <div class="dropdown">
+            <div class="dropbtn">Spaces</div>
+            <div class="dropdown-content">
+                <a href="tools.html" id="tool_nav">Tools</a>
+                <a href="woodShop.html" id="wood_nav">Wood Shop</a>
+                <a aria-current="true" id="sew_nav">Sewing & Textiles</a>
+                <a href="electronics.html" id="electric_nav">Electronics</a>
+                <a href="lasers.html" id="laser_nav">Lasers!</a>
+                <a href="3dprint.html" id="print_nav">3D Printers</a>
+                <a href="cnc.html" id="cnc_nav">CNC</a>
             </div>
-        </nav>
-            <h1><strong style="color: #d3c939;"> Sewing & Textiles</strong></h1>
-        <h2 id="colors">
-            Sewing and textiles equipment/materials are labeled <strong style="color: #d3c939;">YELLOW</strong>
+        </div>
+        
+        <div class="dropdown">
+            <div class="dropbtn">More</div>
+            <div class="dropdown-content">
+                <a href="BTUrules">Rules and Policies</a>
+                <a href="#">Calendar</a>
+                <a href="mischief.html">Mischief Makers</a>
+                <a href="staff.html">Faculty</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1><strong> Sewing & Textiles</strong></h1>
+        <h2 class="color_code">
+            <p>Sewing and textiles equipment/materials are labeled <strong style="color: #aa9f04;">YELLOW</strong></p>
         </h2>
     </header>
     
-    <main>
+    <main class="sew_main">
         <section id="description">
             <h2><strong style="color: #d3c939;">Sew whaaaat?</strong></h2>
 
             <p> lil description goes here </p>
         </section>
+
+        <img width="400" src="../img/sewingMats.jpg" alt="Image of some of the sewing materials available in the BTU" id="center_img">
+
         <section id="use">
             <h2><strong style="color: #d3c939;">How to Use</strong></h2>
             <p>
@@ -48,8 +67,6 @@
                 See the <a href="/pages/mischief.html">BTU Mischief Maker</a> page to contact one of our community experts for sewing tutorials.
             </p>
         </section>
-        
-        <img width="400" src="../img/sewingMats.jpg" alt="Image of some of the sewing materials available in the BTU" id="center_img">
         
         <section id="equipment">
             <h2><strong style="color: #d3c939;">Equipment & Supplies</strong></h2>
