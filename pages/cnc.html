@@ -3,57 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTU Lab — CNC</title>
+    <title>BTU Lab | CNC</title>
     <link rel="icon" type="image/x-icon" href="/img/btu_logo.jpg">
+    <link rel="stylesheet" href="../cnc.css">
 </head>
+
 <body class="cnc_body">
-    <header>
-        <nav>
-            <a href="../index.html" id="logo">
-                <img src="../img/btulablogo.png" alt="website logo" height="100px">  
-                <span class = "btu_lab"> ATLAS | BTU Lab </span>
-            </a>
-            
-            <div>
-                <ul>
-                    <li><a aria-current="true" id="tool_nav">Tools</a></li>
-                    <li><a href="woodShop.html" id="wood_nav">Wood Shop</a></li>
-                    <li><a href="sewing.html" id="sew_nav">Sewing & Textiles</a></li>
-                    <li><a href="electronics.html" id="electric_nav">Electronics</a></li>
-                    <li><a href="lasers.html" id="laser_nav">Lasers!</a></li>
-                    <li><a href="3dprint.html" id="print_nav">3D Printers</a></li>
-                    <li><a href="cnc.html" id="cnc_nav">CNC</a></li>
-                </ul>
-            </div>
-        </nav>
+    <nav>
+        <a href="../index.html" id="logo">
+            <img src="../img/btulablogo.png" alt="website logo" height="50px">  
+            <div> ATLAS | BTU Lab </div>
+        </a>
         
-        <h1><stong>CNC</stong></h1>
-        <h2><strong>WE GOT ONE!</strong></h2>
+        <div class="dropdowns">
+        <div class="dropdown">
+            <div class="dropbtn">Spaces</div>
+            <div class="dropdown-content">
+                <a href="tools.html" id="tools_nav">Tools</a>
+                <a href="woodShop.html" id="wood_nav">Wood Shop</a>
+                <a href="sewing.html" id="sew_nav">Sewing & Textiles</a>
+                <a href="electronics.html" id="electric_nav">Electronics</a>
+                <a href="lasers.html" id="laser_nav">Lasers!</a>
+                <a href="3dprint.html" id="print_nav">3D Printers</a>
+                <a aria-current="true" id="cnc_nav">CNC</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <div class="dropbtn">More</div>
+            <div class="dropdown-content">
+                <a href="BTUrules">Rules and Policies</a>
+                <a href="#">Calendar</a>
+                <a href="mischief.html">Mischief Makers</a>
+                <a href="staff.html">Faculty</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1><stong>CNC</stong><br>
+        <strong>WE GOT ONE!</strong></h1>
         <h2 class="color_code">
-            CNC equipment and materials are labeled <span style="color: #275eaa;">Blue</span>
+            <p>CNC equipment and materials are labeled <span style="color: #275eaa;">Blue</span></p>
         </h2>
-        <p>
-            <ul>
-                <li><strong style="color: #275eaa;">FACULTY:  </strong> Class assignments requiring Shaper CNC should be coordinated by LAs, TAs, or instructors.(Questions: <a href="mailto:zack.weaver@colorado.edu"> zack.weaver@colorado.edu</a>)</li>
-                <li><strong style="color: #275eaa;">STUDENTS: </strong> Assistance with Shaper CNC for class assignments should be coordinated with class LAs or TAs <em>first</em>, then "BTU Mischief Makers", if available.</li>
-                <li><strong style="color: #275eaa;">EVERYBODY: </strong> A brief training is required before using the Shaper CNC.</li>
-                </li>
-            </ul>
-        </p>
     </header>
 
-    <main>
+    <main class="cnc_main">
         <section id="description">
-            <h2>'Cause I'm <strong style="color: #275eaa;">C N C</strong> I'm Dynamite!</h2>
+            <p>
+                <ul>
+                    <li><strong style="color: #275eaa;">FACULTY:  </strong> Class assignments requiring Shaper CNC should be coordinated by LAs, TAs, or instructors.(Questions: <a href="mailto:zack.weaver@colorado.edu"> zack.weaver@colorado.edu</a>)</li>
+                    <li><strong style="color: #275eaa;">STUDENTS: </strong> Assistance with Shaper CNC for class assignments should be coordinated with class LAs or TAs <em>first</em>, then "BTU Mischief Makers", if available.</li>
+                    <li><strong style="color: #275eaa;">EVERYBODY: </strong> A brief training is required before using the Shaper CNC.</li>
+                    </li>
+                </ul>
+            </p>
         </section>
 
+        <img width="200" src="../img/cnc.jpg" alt="Image of Shaper Origin CNC machine." id="center-img">
+
         <section id="thanks">
+            <h2><strong style="color: #3770c0;">'Cause I'm C N C I'm Dynamite!</strong></h2>
             <p><em><strong>Thanks to generous support</strong></em> BTU purchased a Sharper Origin CNC router in 2026!</p>
             <p>Basic operation of the Sharper can be found in this <a href="www.youtube.com/watch?v=QxjE5WOAGi4">YouTube video</a>.</p>
             <p>The Sharper is a precision <em style="color: #275eaa;">(expensive)</em> tool!</p>
         </section>
         
-        <img width="200" src="../img/cnc.jpg" alt="Image of Shaper Origin CNC machine." id="center-img">
+       
     </main>
 
     <footer>
