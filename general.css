@@ -254,6 +254,46 @@ main p, footer p {
     color: var(--color-tools);
 }
 
+.electronics_body {
+    background-color: var(--color-electronics);
+}
+
+.electronics_main h2 {
+    color: var(--color-electronics);
+}
+
+.cnc_body {
+    background-color: var(--color-cnc);
+}
+
+.cnc_main h2 {
+    color: var(--color-cnc);
+}
+
+.sew_body {
+    background-color: var(--color-sewing);
+}
+
+.sew_main h2 {
+    color: var(--color-sewing);
+}
+
+.print_body {
+    background-color: var(--color-print);
+}
+
+.print_main h2 {
+    color: var(--color-print);
+}
+
+.lasers_body {
+    background-color: var(--color-laser);
+}
+
+.lasers_main h2 {
+    color: var(--color-laser);
+}
+
 #tools_nav:hover {
     background-color: var(--color-tools);
 }
