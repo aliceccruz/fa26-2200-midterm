@@ -3,32 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics</title>
-    <link rel="icon" type="image/x-icon" href="/img/btulablogo.png">
+    <title>BTU Lab | Electronics</title>
+    <link rel="icon" type="image/x-icon" href="../img/btu_logo.jpg">
+    <link rel="stylesheet" href="../electronics.css">
 </head>
-<body class="electronics_body">
-    <header>
-        <nav>
-            <a href="../index.html" id="logo">
-                <img src="../img/btulablogo.png" alt="website logo" height="100px">  
-                <span class = "btu_lab"> ATLAS | BTU Lab </span>
-            </a>
-            
-            <div>
-                <ul>
-                    <li><a aria-current="true" id="tool_nav">Tools</a></li>
-                    <li><a href="woodShop.html" id="wood_nav">Wood Shop</a></li>
-                    <li><a href="sewing.html" id="sew_nav">Sewing & Textiles</a></li>
-                    <li><a href="electronics.html" id="electric_nav">Electronics</a></li>
-                    <li><a href="lasers.html" id="laser_nav">Lasers!</a></li>
-                    <li><a href="3dprint.html" id="print_nav">3D Printers</a></li>
-                    <li><a href="cnc.html" id="cnc_nav">CNC</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <h1><strong style="color: #289f91">Electronics</strong></h1>
+<body class="electronics_body">
+    <nav>
+        <a href="../index.html" id="logo">
+            <img src="../img/btulablogo.png" alt="website logo" height="100px">  
+            <div> ATLAS | BTU Lab </div>
+        </a>
+        
+        <div class="dropdowns">
+            <div class="dropdown">
+                <div class="dropbtn">Spaces</div>
+                <div class="dropdown-content">
+                    <a href="tools.html" id="tools_nav">Tools</a>
+                    <a href="woodShop.html" id="wood_nav">Wood Shop</a>
+                    <a href="sewing.html" id="sew_nav">Sewing & Textiles</a>
+                    <a aria-current="true" id="electronics_nav">Electronics</a>
+                    <a href="lasers.html" id="laser_nav">Lasers!</a>
+                    <a href="3dprint.html" id="print_nav">3D Printers</a>
+                    <a href="cnc.html" id="cnc_nav">CNC</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropbtn">More</div>
+            <div class="dropdown-content">
+                <a href="BTUrules">Rules and Policies</a>
+                <a href="#">Calendar</a>
+                <a href="mischief.html">Mischief Makers</a>
+                <a href="staff.html">Faculty</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Electronics</h1>
+        <h2 class="color_code">
+            <p>Electronics equipment is labeled... teal? Cyan? Turquoise? Aqua? Hm...<stong style="color:#289f91;"> THIS COLOR!</stong></p>
+        </h2>
     </header>
+
+    <main class="electronics_main">
+        <section id="description">
+            <h2 style="color: #289f91;">With great power...</h2>
+            <p>Electronics and coding training happens <strong><em>as requested</em></strong> by staff and/or community members. It is also the subject of some ATLAS classes and BTU workshops. See workshops on the BTU Lab Calendar.
+
+                See the BTU Mischief Maker page to contact one of our community experts to get you started.
+            </p>
+        </section>
+
+        <img width="200" src="../img/electronics.jpg" alt="Image of lab workspace with electronics" id="center_img">
+
+        <section id="materials">
+            <h2><strong style="color: #289f91;">ELECTRONICS EQUIPMENT & SUPPLIES</strong></h2>
+            <p>
+                <ul>
+                    <li>Solder Irons & Accessories</li>
+                    <li>Bench Top Power Supplies</li>
+                    <li>Soldering Rework Station</li>
+                    <li>Digital Oscilloscope</li>
+                    <li>Arduino / Raspberry Pi ecosystem</li>
+                    <li>Various Power Components (V=I*R stuff!)</li>
+                    <li>Various Input Components</li>
+                    <li>Various Output Components</li>
+                    <li>LilyPad</li>
+                    <li>Prototyping Supplies</li>
+                    <li>Uhhhh..AND MORE!</li>
+                </ul>
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>
+            Materials: <stong>BTU LAB IS NOT A FREE SUPPLY STORE.</stong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.
+        </p>
+        <p>
+            This is a student project, not an official ATLAS website. Made by AI (Actual Intelligence)
+        </p>
+    </footer>
     
 </body>
 </html>
