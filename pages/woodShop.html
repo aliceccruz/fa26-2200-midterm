@@ -8,37 +8,53 @@
     <link rel="stylesheet" href="../general.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html" id="logo">
-                <img src="../img/btulablogo.png" alt="website logo" height="100px">  
-                <span class = "btu_lab"> ATLAS | BTU Lab </span>
-            </a>
-            
-            <div>
-                <ul>
-                    <li><a href="tools.html" id="tool_nav">Tools</a></li>
-                    <li><a aria-current="true" id="wood_nav">Wood Shop</a></li>
-                    <li><a href="sewing.html" id="sew_nav">Sewing & Textiles</a></li>
-                    <li><a href="electronics.html" id="electric_nav">Electronics</a></li>
-                    <li><a href="lasers.html" id="laser_nav">Lasers!</a></li>
-                    <li><a href="3dprint.html" id="print_nav">3D Printers</a></li>
-                    <li><a href="cnc.html" id="cnc_nav">CNC</a></li>
-                </ul>
+    <nav>
+        <a href="../index.html" id="logo">
+            <img src="../img/btulablogo.png" alt="website logo" height="50px">  
+            <div> ATLAS | BTU Lab </div>
+        </a>
+        
+        <div class="dropdowns">
+        <div class="dropdown">
+            <div class="dropbtn">Spaces</div>
+            <div class="dropdown-content">
+                <a href="tools.html" id="tools_nav">Tools</a>
+                <a aria-current="true" id="wood_nav">Wood Shop</a>
+                <a href="sewing.html" id="sew_nav">Sewing & Textiles</a>
+                <a href="electronics.html" id="electric_nav">Electronics</a>
+                <a href="lasers.html" id="laser_nav">Lasers!</a>
+                <a href="3dprint.html" id="print_nav">3D Printers</a>
+                <a href="cnc.html" id="cnc_nav">CNC</a>
             </div>
-        </nav>
+        </div>
+        
+        <div class="dropdown">
+            <div class="dropbtn">More</div>
+            <div class="dropdown-content">
+                <a href="BTUrules">Rules and Policies</a>
+                <a href="#">Calendar</a>
+                <a href="mischief.html">Mischief Makers</a>
+                <a href="staff.html">Faculty</a>
+            </div>
+        </div>
+        </div>
+    </nav>
 
-        <h1><strong style="color: #db3d9c;">Wood Shop</strong></h1>
-        <h2 id="colors">
-            The wood shop entrance in marked <strong style="color: #db3d9c;">PINK.</strong> Inside, tools have their own color-coding system.
+    <header>
+        <h1><strong>Wood Shop</strong></h1>
+        <h2 class="color_code">
+            <p>The wood shop entrance in marked <strong style="color: #db3d9c;">PINK.</strong> Inside, tools have their own color-coding system.</p>
         </h2>
     </header>
     
-    <main>
+    <main class="wood_main">
         <section id="description">
             <h3><strong style="color: #db3d9c;"> Wood shop </strong> is seperate from general BTU access and requires an orientation. The orientation schedule can be found on the <a href="/pages/labCalender.html">BTU Lab Calender.</a></h3>
             <p>Access to certian machines is facilitated by BTU <strong>Mischief Makers</strong>. Anyone can become a Mischief Maker on any machine.</p>
         </section>
+
+        <img width="400" src="../img/woodshop_img.jpg" alt="Image of a woodshop project" id="center_img">
+
         <section id="use">
             <h2><strong style="color: #db3d9c;">How to Use</strong></h2>
             <h3><strong style="color: #db3d9c;">FOR YOUR SAFETY</strong> major equipment including the table saw, hand saw, belt sander, chop saw, and drill press are powered off between the hours of 10pm and 6am daily.</h3>
@@ -64,8 +80,7 @@
             <p>Multiple violations of wood shop policy, by one or more individuals, will result in reduced access for everyone including locking out machines or the entire space when staff are not available.</p>
         </section>
         
-        <img width="400" src="../img/woodshop_img.jpg" alt="Image of a woodshop project" id="center_img">
-        
+      
         <section id="equipment">
             <h2><strong style="color: #db3d9c;">Equipment & Supplies</strong></h2>
             
