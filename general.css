@@ -356,3 +356,68 @@ nav a:visited {
 .faculty-page main h2{
     color: color-mix(in srgb, var(--color-neutral) 20%, white);
 }
+
+/* Media Queries for Mobile Design */
+
+@media (max-width: 400px) {
+    nav {
+        flex-direction: column;
+        position: static
+    }
+
+    #logo {
+        justify-content: center;
+        position: relative;
+        left: -15px;
+        border: none;
+        margin: 0px;
+    }
+
+    .dropdowns {
+        flex-direction: column;
+        border: none;
+        margin: 0px;
+    }
+
+    .dropbtn {
+        border: none;
+        border-top: 2px solid var(--color-neutral);
+        border-bottom: 2px solid var(--color-background);
+        border-radius: 0px 0px var(--radius-md) var(--radius-md);
+    }
+
+    .dropbtn:hover{
+        border-radius: 0px;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content{
+        border-radius: 0px 0px var(--radius-md) var(--radius-md);
+    }
+
+    nav  .dropdown  a {
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    nav .dropdown a:hover {
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
