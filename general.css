@@ -357,6 +357,34 @@ nav a:visited {
     color: color-mix(in srgb, var(--color-neutral) 20%, white);
 }
 
+.staff-page main h2{
+    color: color-mix(in srgb, var(--color-neutral) 20%, white);
+}
+
+.staff-page main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "policies"
+        "use";
+    gap: 1rem;
+}
+.staff-page .info-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5 rem;
+}
+.staff-page .info-card img {
+    width: 30%;
+    max-width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
 /* Media Queries for Mobile Design */
 
 @media (max-width: 400px) {
