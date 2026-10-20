@@ -5,32 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTU Lab | Home</title>
     <link rel="icon" type="image/x-icon" href="/img/btu_logo.jpg">
+    <link rel="stylesheet" href="../general.css">
 </head>
 <body>
+    <nav>
+        <a href="../index.html" id="logo">
+            <img src="../img/btulablogo.png" alt="website logo" height="50px">  
+            <div> ATLAS | BTU Lab </div>
+        </a>
+        
+        <div class="dropdowns">
+        <div class="dropdown">
+            <div class="dropbtn">Spaces</div>
+            <div class="dropdown-content">
+                <a href="pages/tools.html" id="tools_nav">Tools</a>
+                <a href="pages/woodShop.html" id="wood_nav">Wood Shop</a>
+                <a href="pages/sewing.html" id="sew_nav">Sewing & Textiles</a>
+                <a href="pages/electronics.html" id="electric_nav">Electronics</a>
+                <a href="pages/lasers.html" id="laser_nav">Lasers!</a>
+                <a href="pages/3dprint.html" id="print_nav">3D Printers</a>
+                <a href="pages/cnc.html" id="cnc_nav">CNC</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <div class="dropbtn">More</div>
+            <div class="dropdown-content">
+                <a href="pages/BTUrules.html">Rules and Policies</a>
+                <a href="pages/calendar.html">Calendar</a>
+                <a href="pages/staff.html">Mischief Makers</a>
+                <a href="pages/faculty.html">For Faculty</a>
+            </div>
+        </div>
+        </div>
+    </nav>
     <header>
-        <img src="img/btulablogo.png" alt="BTU lab logo" height="100px">
-        <p> ATLAS | BTU Lab</p>
-
-        <nav>
-            <ul>
-                <li><a aria-current="true">Home</a></li>
-                <li><a href="pages/tools.html">Tools</a></li>
-                <li><a href="pages/woodShop.html">Wood Shop</a></li>
-                <li><a href="pages/sewing.html">Sewing & Textiles</a></li>
-                <li><a href="pages/electronics.html">Electronics</a></li>
-                <li><a href="pages/lasers.html">Lasers!</a></li>
-                <li><a href="pages/3dprint.html">3D Printers</a></li>
-                <li><a href="pages/cnc.html">CNC</a></li>
-            </ul>
-        </nav>
-
         <form>
             <label for="search">Search</label>
             <input type="search" id="search" name="search">
             <button type="submit">Search</button>
         </form>
     </header>
-
     <main>
 
         <section class="hero">
@@ -46,7 +61,6 @@
             Architecture. It serves multiple functions as a general workspace,
             and workshop host.
         </p>
-
         <section>
             <img src="img/BTU_Staff.png" alt="students posing with a snake">
             <p>
@@ -101,7 +115,9 @@
                 Boulder, CO 80309
             </address>
         </section>
-
+ 
+    </main>
+    <footer>
         <p>
             Materials: <strong>BTU LAB IS NOT A FREE SUPPLY STORE</strong>.
             But there are many ways to barter, including displaying your work
@@ -109,10 +125,6 @@
             volunteering to organize supplies, and more. If you need
             something, we ask that you give something in return.
         </p>
- 
-    </main>
-
-    <footer>
         <p>&copy; ATLAS BTU Lab</p>
     </footer>
 

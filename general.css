@@ -325,4 +325,34 @@ main p, footer p {
 nav a:visited {
     color: var(--color-neutral);
 }
-
+.rules-page main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "policies"
+        "use";
+    gap: 1rem;
+}
+.rules-page main h2{
+    color: color-mix(in srgb, var(--color-neutral) 20%, white);
+}
+.calendar-page main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "policies use";
+    gap: 1rem;
+}
+.calendar-page main h2{
+    color: color-mix(in srgb, var(--color-neutral) 20%, white);
+}
+.faculty-page main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "policies"
+        "use";
+    gap: 1rem;
+}
+.faculty-page main h2{
+    color: color-mix(in srgb, var(--color-neutral) 20%, white);
+}
