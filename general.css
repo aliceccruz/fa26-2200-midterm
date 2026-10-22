@@ -5,7 +5,7 @@
     --color-primary: #002382; /* True Cobalt - Main Brand Color */
     --color-secondary: #007C8A;   /* Teal - Complementary Action Color */
     --color-accent: #B64377;  /* Berry Crush - Highlight / Warning Color */
-    --color-neutral: #1B1B2f; /* Carbon Black - Neutral Text and Background */
+    --color-neutral: #1B1B3f; /* Carbon Black - Neutral Text and Background */
     --color-highlight: #F9C80E;   /* Bright Amber - Accent / Attention Color */
 
 /* Space-Specific Colors */
@@ -19,20 +19,20 @@
 
 /* Derived Colors for Flexibility */
     --color-background: color-mix(in srgb, var(--color-neutral) 20%, white);
-    --color-shadow: rgba(27,27,30,0.25);
+    --color-shadow: rgba(27,27,30,0.75);
     --color-text-dark: var(--color-neutral);
-    --color-text-light: white;
+    --color-text-light: --color-background;
+    --color-neutral-light: color-mix(in srgb, var(--color-neutral) 30%, lightblue);
 
 /* Typography */
     --font-primary: 'Aldrich', sans-serif;
-    --font-secondary: 'Nunito', sans-serif;
+    --font-secondary: 'Garamond', serif;
 
 /* Spacing System */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
+    --spacing-sm: 0.5em;
+    --spacing-norm: 1em;
+    --spacing-lg: 2em;
+    --spacing-xl: 3em;
 
 /* Border Radius */
     --radius-sm: 4px;
@@ -42,6 +42,7 @@
 
 body {
     font-family: var(--font-primary), var(--font-secondary);
+    margin: 0px;
 }
 
 nav, section, footer, .color_code {
@@ -52,22 +53,29 @@ nav, section, footer, .color_code {
     box-shadow: 0px 8px 16px 0px var(--color-shadow);
 }
 
+.full_bar {
+    background-color: var(--color-neutral);
+    padding: var(--spacing-norm) var(--spacing-lg);
+    top: 0px;
+    position: sticky;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
-    top: 10px;
-    position: sticky;
 }
 
 #logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
     
     font-size: 1.5em;
     color: var(--color-neutral);
     text-decoration: none;
     
-    margin-left: 1em;
+    margin-left: var(--spacing-norm);
     padding: 10px 10px;
     
     border-left: 2px solid;
@@ -75,17 +83,24 @@ nav {
     border-color: var(--color-background);
 }
 
-#logo > div {   
+#logo > p {   
     display: flex;
     align-items: center;
-    margin-left: 0.5em;
+}
+
+#logo > img {
+    height: 50px;
+}
+
+#logo:hover img {
+    height: 55px; 
 }
 
 .dropdowns{
     display: flex;
     justify-content: flex-end;
     
-    margin-right: 1em;
+    margin-right: var(--spacing-norm);
 }
 
 .dropdown {
@@ -130,7 +145,7 @@ nav {
 .dropdown:hover .dropbtn {
     font-weight: bold;
     border-color: var(--color-neutral);
-    background-color: var(--color-highlight);
+    background-color: var(--color-neutral-light);
 }
 
 nav  .dropdown  a {
@@ -144,6 +159,7 @@ nav  .dropdown  a {
 }
 
 nav a:hover {
+    background-color: var(--color-neutral-light);
     font-weight: bold;
     border-left: 2px solid;
     border-right: 2px solid;
@@ -158,7 +174,8 @@ header {
     grid-template-areas: 
         ". title . colors";
 
-    margin: 1em 0;
+    margin: var(--spacing-norm) var(--spacing-xl);
+    margin-top: var(--spacing-lg);
 }
 
 header  h1 {
@@ -189,7 +206,7 @@ main {
         "description description description"
         "use img equipment";
 
-    margin: 1em 0;
+    margin: var(--spacing-norm) var(--spacing-xl);
 }
 
 #description {
@@ -247,15 +264,31 @@ main p, footer p {
 
 /* Page specific */
 .tools_body {
-    background-color: var(--color-tools);
+    background-image: linear-gradient(to bottom, var(--color-tools) 20%, var(--color-neutral));
 }
 
 .tools_main h2 {
     color: var(--color-tools);
 }
 
+.wood_body {
+    background-image: linear-gradient(to bottom, var(--color-woodshop) 20%, var(--color-neutral));
+}
+
+.wood_main h2{
+    color: var(--color-woodshop);
+}
+
+.sew_body {
+    background-image: linear-gradient(to bottom, var(--color-sewing) 20%, var(--color-neutral));
+}
+
+.sew_main h2 {
+    color: var(--color-sewing);
+}
+
 .electronics_body {
-    background-color: var(--color-electronics);
+    background-image: linear-gradient(to bottom, var(--color-electronics) 20%, var(--color-neutral));
 }
 
 .electronics_main h2 {
@@ -263,23 +296,15 @@ main p, footer p {
 }
 
 .cnc_body {
-    background-color: var(--color-cnc);
+    background-image: linear-gradient(to bottom, var(--color-cnc) 20%, var(--color-neutral));
 }
 
 .cnc_main h2 {
     color: var(--color-cnc);
 }
 
-.sew_body {
-    background-color: var(--color-sewing);
-}
-
-.sew_main h2 {
-    color: var(--color-sewing);
-}
-
 .print_body {
-    background-color: var(--color-print);
+    background-image: linear-gradient(to bottom, var(--color-print) 20%, var(--color-neutral));
 }
 
 .print_main h2 {
@@ -287,11 +312,15 @@ main p, footer p {
 }
 
 .lasers_body {
-    background-color: var(--color-laser);
+    background-image: linear-gradient(to bottom, var(--color-laser) 20%, var(--color-neutral));
 }
 
 .lasers_main h2 {
     color: var(--color-laser);
+}
+
+#logo:hover {
+    background-color: var(--color-background);
 }
 
 #tools_nav:hover {
@@ -388,54 +417,36 @@ nav a:visited {
 /* Media Queries for Mobile Design */
 
 @media (max-width: 400px) {
+
+    .full_bar{
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
+
     nav {
-        flex-direction: column;
-        position: static
+        align-items: center;
     }
 
     #logo {
+        height: 100%;
         justify-content: center;
-        position: relative;
-        left: -15px;
         border: none;
-        margin: 0px;
+        padding: 0px;
+        margin-left:  var(--spacing-norm);
+    }
+
+    #logo p {
+        display: none;
+        position: fixed;
     }
 
     .dropdowns {
-        flex-direction: column;
-        border: none;
-        margin: 0px;
-    }
-
-    .dropbtn {
-        border: none;
-        border-top: 2px solid var(--color-neutral);
-        border-bottom: 2px solid var(--color-background);
-        border-radius: 0px 0px var(--radius-md) var(--radius-md);
-    }
-
-    .dropbtn:hover{
-        border-radius: 0px;
+        margin-left: var(--spacing-sm);
     }
 
     .dropdown-content {
-        position: static;
         width: 100%;
         z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content{
-        border-radius: 0px 0px var(--radius-md) var(--radius-md);
-    }
-
-    nav  .dropdown  a {
-        border-left: 0px;
-        border-right: 0px;
-    }
-
-    nav .dropdown a:hover {
-        border-left: 0px;
-        border-right: 0px;
     }
 
     header {
