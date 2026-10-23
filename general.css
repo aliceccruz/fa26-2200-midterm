@@ -26,7 +26,7 @@
 
 /* Typography */
     --font-primary: 'Aldrich', sans-serif;
-    --font-secondary: 'Garamond', serif;
+    --font-secondary: 'Georgia', serif;
 
 /* Spacing System */
     --spacing-sm: 0.5em;
@@ -63,6 +63,7 @@ nav, section, footer, .color_code {
 nav {
     display: flex;
     justify-content: space-between;
+    height: 65px;
 }
 
 #logo {
@@ -93,12 +94,14 @@ nav {
 }
 
 #logo:hover img {
-    height: 55px; 
+    transform: scale(110%);
+    transform-origin: center;
 }
 
 .dropdowns{
     display: flex;
     justify-content: flex-end;
+    height: 100%;
     
     margin-right: var(--spacing-norm);
 }
@@ -174,8 +177,7 @@ header {
     grid-template-areas: 
         ". title . colors";
 
-    margin: var(--spacing-norm) var(--spacing-xl);
-    margin-top: var(--spacing-lg);
+    margin: var(--spacing-lg) var(--spacing-lg);
 }
 
 header  h1 {
@@ -185,6 +187,7 @@ header  h1 {
     margin-block: 0;
     text-transform: uppercase;
     font-size: 5em;
+    color: var(--color-neutral);
 }
 
 header h2 {
@@ -193,6 +196,10 @@ header h2 {
 }
 
 header h2 p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
     margin: 1em;
 }
 
@@ -200,13 +207,15 @@ main {
     display: grid;
     gap: 1em;
     justify-content: center;
-    grid-template-columns: 2fr 1.25fr 2fr;
-    grid-template-rows: auto auto;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
         "description description description"
-        "use img equipment";
+        "use img img"
+        "equipment img img";
 
-    margin: var(--spacing-norm) var(--spacing-xl);
+    margin: var(--spacing-lg) var(--spacing-lg);
 }
 
 #description {
@@ -215,9 +224,10 @@ main {
 
 main img {
     grid-area: img;
-
+    box-sizing: border-box;
     width: 100%;
-
+    height:100%;
+    object-fit: cover;
     border: 2px solid;
     border-color: var(--color-neutral);
     border-radius: var(--radius-md);
@@ -234,8 +244,9 @@ main img {
 
 main h2 {
     display: inline-block;
-    padding: 5px 8px;
-    padding-left: 1em;
+    padding: 0.25em 0.5em;
+    padding-left: 0.75em;
+    margin-right: 2em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: var(--color-neutral);
@@ -244,13 +255,11 @@ main h2 {
 main p, footer p {
     padding: 0 1em;
     font-family: var(--font-secondary);
-    font-weight: 500;
+    font-size: 1em;
 }
 
 #equipment div {
-
     display: grid;
-    justify-content: space-evenly;
     align-items: center;
     grid-template-columns: repeat(3, auto);
     margin-bottom: 1em;
@@ -258,6 +267,7 @@ main p, footer p {
 
 #equipment p {
     display: block;
+    box-sizing: border-box;
     width: fit-content;
     margin-block: 8px;
 }
@@ -269,6 +279,24 @@ main p, footer p {
 
 .tools_main h2 {
     color: var(--color-tools);
+}
+
+.tool_key1{
+    display: inline-block;
+    background-color: color-mix(in srgb, var(--color-tools) 60%, var(--color-neutral));
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
+}
+
+.tool_key2{
+    display: inline-block;
+    background-color: var(--color-tools);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
 }
 
 .wood_body {
@@ -452,11 +480,20 @@ nav a:visited {
     header {
         display: flex;
         flex-direction: column;
+        margin-left: var(--spacing-norm);
+        margin-right: var(--spacing-norm);
+    }
+
+    header h2 {
+        font-size: 1.25em;
     }
     
     main {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        margin-left: var(--spacing-norm);
+        margin-right: var(--spacing-norm);
+        row-gap: 1em;
     }
 }
