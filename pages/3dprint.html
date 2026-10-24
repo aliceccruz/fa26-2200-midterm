@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTU Lab | 3D Printers</title>
-    <link rel="icon" type="image/x-icon" href="../img/btu_logo.jpg">
+    <link rel="icon" type="image/x-icon" href="../img/btulablogo.jpg">
     <link rel="stylesheet" href="../general.css">
 </head>
 <body class="print_body">
+    <div class="full_bar">    
         <nav>
             <a href="../index.html" id="logo">
                 <img src="../img/btulablogo.png" alt="website logo" height="100px">  
-                <div> ATLAS | BTU Lab </div>
+                <p>BTU Lab</p>
             </a>
-            
-            <div class="dropdowns">
+            <section class="dropdowns">
                 <div class="dropdown">
-                    <div class="dropbtn">Spaces</div>
+                    <button class="dropbtn">Spaces</button>
                     <div class="dropdown-content">
                         <a href="tools.html" id="tools_nav">Tools</a>
                         <a href="woodShop.html" id="wood_nav">Wood Shop</a>
@@ -26,86 +26,77 @@
                         <a aria-current="true" id="print_nav">3D Printers</a>
                         <a href="cnc.html" id="cnc_nav">CNC</a>
                 </div>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropbtn">More</div>
-                <div class="dropdown-content">
-                    <a href="BTUrules.html">Rules and Policies</a>
-                    <a href="calendar.html">Calendar</a>
-                    <a href="staff.html">Mischief Makers</a>
-                    <a href="faculty.html">For Faculty</a>
                 </div>
-            </div>
-            </div>
+                <div class="dropdown">
+                    <button class="dropbtn">More</button>
+                    <div class="dropdown-content">
+                        <a href="BTUrules.html">Rules and Policies</a>
+                        <a href="calendar.html">Calendar</a>
+                        <a href="staff.html">Mischief Makers</a>
+                        <a href="faculty.html">For Faculty</a>
+                    </div>
+                </div>
+            </section>
         </nav>
+    </div>
 
-        <header>
-            <h1><strong>3D Printers</strong></h1>
-            <h2 class="color_code">
-                <p>3D Printing equiment is labeled <strong style="color: #bf369f;">PURPLE</strong></p>
-            </h2>
-        </header>
+    <header>
+        <h1><strong>3D Printers</strong></h1>
+        <h2 class="color_code">
+            <p>3D Printing equipment is PURPLE <span class="print_key"></span></p>
+        </h2>
+    </header>
 
     <main class="print_main">
-        <section id="description">
-            <p>
-                <ul>
-                    <li><strong style="color: #bf369f;">FACULTY:  </strong>Class assignments requiring 3D printing should be coordinated by LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu"> zack.weaver@colorado.edu</a>)</li>
-                    <li><strong style="color: #bf369f;">STUDENTS: </strong>Assistance with 3D Printing for class assignments should be coordinated with class LAs or TAs <em>first</em>, then "BTU Mischief Makers", if available.
-                    <li><strong style="color: #bf369f;">EVERYBODY: </strong>3D printing hardware/software update frequently! Make sure you stay up to date, too.</li>
-                    </li>
-                </ul>
-            </p>
+        <section id="longtop">
+            <p><strong>FACULTY: </strong>Class assignments requiring 3D printing should be coordinated by LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu"> zack.weaver@colorado.edu</a>)</p>
+            <p><strong>STUDENTS: </strong>Assistance with 3D Printing for class assignments should be coordinated with class LAs or TAs <em>first</em>, then "BTU Mischief Makers", if available.</p>
+            <p><strong>EVERYBODY: </strong>3D printing hardware/software update frequently! Make sure you stay up to date, too.</p>
         </section>
 
-        <img width="200" src="../img/3dprint.jpeg" alt="Image of 3D printers" id="center_img">
+        <img src="../img/3dprint.jpeg" alt="Image of 3D printers">
 
-        <section id="use">
-            <h2><strong style="color: #bf369f;">The revolution will be printed...</strong></h2>
-                <p>3D Printers located in the main space are for <strong><em>intended use only!</em></strong> Additional 3D printers are available for experimentation. Contact a <a href="mischiefmakers.html">Mischief Maker</a> to set it up. We got you!</p>
+        <section id="mid1">
+            <h2>The revolution will be printed...</h2>
+                <p>3D Printers located in the main space are for <strong><em>intended use only!</em></strong> Additional 3D printers are available for experimentation. Contact a <a href="staff.html">Mischief Maker</a> to set it up. We got you!</p>
                 <p>3D Printing is also the subject of some workshops. See workshops on the <a href="calendar.html">BTU Lab Calendar.</a></p>
                 <p>Jobs are run on a first-come-first-served basis<strong style="color: #bf369f;">***</strong>.</p>
                 <p>! PRUSA SLICER software is provided and required !</p>
         </section>
 
-        <section id="intended">
-            <h2><strong style="color: #bf369f;">"Intended" Use pf BTU Lab 3D Printers</strong></h2>
-            <p>
-                <ul>
-                    <li>Do not alter any part of the machine</li>
-                    <li>BTU uses PLA and ABS material, <span style="text-decoration: underline;">only</span> <em>UNLESS</em> other materials are <em>agreed upon with BTU staff.</em></li>
-                    <li>Do not train yourself on the use of the machine. There's more to it than YouTube thinks... We're here to help you learn, hands on.</li>
-                    <li>Do not use third-party slicing software. Use Prusa Slicer, as specified for each machine.</li>
-                    <li><span style="color: #bf369f;">***</span>We are updating our file management system to streamline your work. For now, please work directly with BTU staff to get your parts going.<span style="color: #bf369f;">***</span></li>
-                </ul>
-            </p>
+        <section id="mid2">
+            <h2>"Intended" Use of BTU Lab 3D Printers</h2>
+            <ul>
+                <li>Do not alter any part of the machine</li>
+                <li>BTU uses PLA and ABS material, <span style="text-decoration: underline;">only</span> <em>UNLESS</em> other materials are <em>agreed upon with BTU staff.</em></li>
+                <li>Do not train yourself on the use of the machine. There's more to it than YouTube thinks... We're here to help you learn, hands on.</li>
+                <li>Do not use third-party slicing software. Use Prusa Slicer, as specified for each machine.</li>
+                <li><span style="color: #bf369f;">***</span>We are updating our file management system to streamline your work. For now, please work directly with BTU staff to get your parts going.<span style="color: #bf369f;">***</span></li>
+            </ul>
         </section>
 
-        <section id="materials">
-            <h2><strong style="color: #bf369f;">3D PRINTING EQUIPMENT AND MATERIALS</strong></h2>
-            <p>
-                <ul>
-                    <li>Prusa Mk4 FDM printer (x3)</li>
-                    <li>Prusa Mk3S+ FDM printer (x3)</li>
-                    <li>Prusa MINI2 FDM printer (x4)</li>
-                    <li>Additional FDM printers available for experimental projects. See staff!</li>
-                    <li>1.75mm PLA filament (black, and random colors)</li>
-                    <li>1.75mm ABS filament (black, and random colors)</li>
-                    <li><strong><em>Additional materials allowed only with staff approval.</em></strong></li>
-                </ul>
-            </p>
+        <section id="longbot">
+            <h2>Equipment & Materials</h2>
+            <div>
+                <p>Prusa Mk4 FDM printer (x3)</p>
+                <p>Prusa Mk3S+ FDM printer (x3)</p>
+                <p>Prusa MINI2 FDM printer (x4)</p>
+                <p>Additional FDM printers available for experimental projects. See staff!</p>
+                <p>1.75mm PLA filament (black, and random colors)</p>
+                <p>1.75mm ABS filament (black, and random colors)</p>
+                <p><strong><em>Additional materials allowed only with staff approval.</em></strong></p>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <p>
-            Materials: <stong>BTU LAB IS NOT A FREE SUPPLY STORE.</stong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.
-        </p>
-        <p>
-            This is a student project, not an official ATLAS website. Made by AI (Actual Intelligence)
-        </p>
-    </footer>
-    
+    <div class="full_bar">
+        <footer>
+            <p>
+                Materials: <stong>BTU LAB IS NOT A FREE SUPPLY STORE.</stong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.
+            </p>
+            <p>
+                This is a student project, not an official ATLAS website. Made by AI (Actual Intelligence)
+            </p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -17,7 +17,7 @@
     --color-sewing:#d3c939;
     --color-electronics:#289f91;
     --color-laser:#b82746;
-    --color-print: #bf369f;
+    --color-print: #bf36bf;
     --color-cnc:#275eaa;
 
 /* Derived Colors for Flexibility */
@@ -70,6 +70,8 @@ a:hover {
 
 ul {
     font-family: var(--font-secondary);
+    padding-right: 2em;
+    padding-bottom: 0.5em;
 }
 
 .full_bar {
@@ -118,6 +120,9 @@ nav {
 }
 
 .dropdowns{
+    background-color: var(--color-background);
+    border: none;
+    box-shadow: none;
     display: flex;
     justify-content: flex-end;
     height: 100%;
@@ -133,6 +138,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  border-style: none;
   
   font-size: 1.5em;
   color: var(--color-neutral);
@@ -270,6 +278,21 @@ main img {
     box-shadow: 0px 8px 16px 0px var(--color-shadow);
 }
 
+.laser_main { /* the lasers page has a bunch of extra info, so it gets it's own main grid layout */
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "lt lt lt"
+        "m1 m1 img"
+        "m2 lb lb";
+
+    margin: var(--spacing-lg) var(--spacing-lg);
+}
+
 main h2 {
     display: inline-block;
     padding: 0.25em 0.5em;
@@ -300,7 +323,8 @@ main p, footer p {
     margin-block: 8px;
 }
 
-/* Page specific */
+/* -----Page Specific Colors-----*/
+
 .tools_body {
     background-image: linear-gradient(to bottom, var(--color-tools) 20%, var(--color-neutral));
 }
@@ -345,43 +369,93 @@ main p, footer p {
 }
 
 .sew_body {
-    background-image: linear-gradient(to bottom, var(--color-sewing) 20%, var(--color-neutral));
+    background-image: linear-gradient(to bottom, var(--color-sewing) 10%, var(--color-neutral));
 }
 
 .sew_main h2 {
     color: var(--color-sewing);
 }
 
+.sew_key {
+    display: inline-block;
+    background-color: var(--color-sewing);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
+
+}
+
 .electronics_body {
-    background-image: linear-gradient(to bottom, var(--color-electronics) 20%, var(--color-neutral));
+    background-image: linear-gradient(to bottom, var(--color-electronics), var(--color-neutral));
 }
 
 .electronics_main h2 {
     color: var(--color-electronics);
 }
 
-.cnc_body {
-    background-image: linear-gradient(to bottom, var(--color-cnc) 20%, var(--color-neutral));
+.electronics_key {
+    display: inline-block;
+    background-color: var(--color-electronics);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
+
 }
 
-.cnc_main h2 {
-    color: var(--color-cnc);
+.lasers_body {
+    background-image: linear-gradient(to bottom, var(--color-laser), var(--color-neutral));
+}
+
+.laser_main h2 {
+    color: var(--color-laser);
+}
+
+.laser_key {
+    display: inline-block;
+    background-color: var(--color-laser);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
+
 }
 
 .print_body {
-    background-image: linear-gradient(to bottom, var(--color-print) 20%, var(--color-neutral));
+    background-image: linear-gradient(to bottom, var(--color-print), var(--color-neutral));
 }
 
 .print_main h2 {
     color: var(--color-print);
 }
 
-.lasers_body {
-    background-image: linear-gradient(to bottom, var(--color-laser) 20%, var(--color-neutral));
+.print_key {
+    display: inline-block;
+    background-color: var(--color-print);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
+
 }
 
-.lasers_main h2 {
-    color: var(--color-laser);
+.cnc_body {
+    background-image: linear-gradient(to bottom, var(--color-cnc) 10%, var(--color-neutral));
+}
+
+.cnc_main h2 {
+    color: var(--color-cnc);
+}
+
+.cnc_key {
+    display: inline-block;
+    background-color: var(--color-cnc);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
+
 }
 
 #logo:hover {
@@ -419,6 +493,8 @@ main p, footer p {
 nav a:visited {
     color: var(--color-neutral);
 }
+
+/* -----Special Pages----- */
 .rules-page main {
     display: grid;
     grid-template-columns: 1fr;
@@ -521,11 +597,25 @@ nav a:visited {
         margin-right: var(--spacing-norm);
     }
 
+    header h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+
     header h2 {
         font-size: 1.25em;
     }
     
     main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-left: var(--spacing-norm);
+        margin-right: var(--spacing-norm);
+        row-gap: 1em;
+    }
+
+    .laser_main {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;

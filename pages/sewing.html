@@ -9,56 +9,50 @@
 </head>
 
 <body class="sew_body">
-    <nav>
-        <a href="../index.html" id="logo">
-            <img src="../img/btulablogo.png" alt="website logo" height="50px">  
-            <div> ATLAS | BTU Lab </div>
-        </a>
-        
-        <div class="dropdowns">
-        <div class="dropdown">
-            <div class="dropbtn">Spaces</div>
-            <div class="dropdown-content">
-                <a href="tools.html" id="tools_nav">Tools</a>
-                <a href="woodShop.html" id="wood_nav">Wood Shop</a>
-                <a aria-current="true" id="sew_nav">Sewing & Textiles</a>
-                <a href="electronics.html" id="electric_nav">Electronics</a>
-                <a href="lasers.html" id="laser_nav">Lasers!</a>
-                <a href="3dprint.html" id="print_nav">3D Printers</a>
-                <a href="cnc.html" id="cnc_nav">CNC</a>
-            </div>
-        </div>
-        
-        <div class="dropdown">
-            <div class="dropbtn">More</div>
-            <div class="dropdown-content">
-                <a href="BTUrules.html">Rules and Policies</a>
-                <a href="calendar.html">Calendar</a>
-                <a href="staff.html">Mischief Makers</a>
-                <a href="faculty.html">For Faculty</a>
-            </div>
-        </div>
-        </div>
-    </nav>
-
+    <div class="full_bar">
+        <nav>
+            <a href="../index.html" id="logo">
+                <img src="../img/btulablogo.png" alt="website logo">  
+                <p>BTU Lab</p>
+            </a>
+            
+            <section class="dropdowns">
+                <div class="dropdown">
+                    <button class="dropbtn">Spaces</button>
+                    <div class="dropdown-content">
+                        <a href="tools.html" id="tools_nav">Tools</a>
+                        <a href="woodShop.html" id="wood_nav">Wood Shop</a>
+                        <a aria-current="true" href="#" id="sew_nav">Sewing & Textiles</a>
+                        <a href="electronics.html" id="electric_nav">Electronics</a>
+                        <a href="lasers.html" id="laser_nav">Lasers!</a>
+                        <a href="3dprint.html" id="print_nav">3D Printers</a>
+                        <a href="cnc.html" id="cnc_nav">CNC</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">More</button>
+                    <div class="dropdown-content">
+                        <a href="BTUrules.html">Rules and Policies</a>
+                        <a href="calendar.html">Calendar</a>
+                        <a href="staff.html">Mischief Makers</a>
+                        <a href="faculty.html">For Faculty</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </div>
     <header>
-        <h1><strong> Sewing & Textiles</strong></h1>
+        <h1>Sewing &<br>Textiles</h1>
         <h2 class="color_code">
-            <p>Sewing and textiles equipment/materials are labeled <strong style="color: #aa9f04;">YELLOW</strong></p>
+            <p>Sewing supplies are Yellow <span class="sew_key"></span></p>
         </h2>
     </header>
     
     <main class="sew_main">
-        <section id="description">
-            <h2><strong style="color: #d3c939;">Sew whaaaat?</strong></h2>
 
-            <p> lil description goes here </p>
-        </section>
-
-        <img width="400" src="../img/sewingMats.jpg" alt="Image of some of the sewing materials available in the BTU" id="center_img">
-
-        <section id="use">
-            <h2><strong style="color: #d3c939;">How to Use</strong></h2>
+        <section id="mid1">
+            <h2>Sew whaaat?!</h2>
             <p>
                 Sewing and textiles equipment training happens <strong><i>as requested</i></strong> by staff and/or community members. It is also the subject of some workshops. 
                 See workshops on the <a href="/pages/labCalender.html">BTU Lab Calender</a>.
@@ -67,30 +61,33 @@
                 See the <a href="/pages/mischief.html">BTU Mischief Maker</a> page to contact one of our community experts for sewing tutorials.
             </p>
         </section>
+
+        <img src="../img/sewingMats.jpg" alt="Image of some of the sewing materials available in the BTU">
         
-        <section id="equipment">
-            <h2><strong style="color: #d3c939;">Equipment & Supplies</strong></h2>
-            
-            <ul>
-                <li>Multi-stitch Sewing Machines</li>
-                <li>4-Thread Serger</li>
-                <li>Industrial Sewing Machines</li>
-                <li>Cutting Mats</li>
-                <li>Fabric Scissors and Knives</li>
-                <li>Pins and Needles</li>
-                <li>Iron and Ironing Board</li>
-                <li>Assortment of Fabrics</li>
-                <li>...and more!</li>
-            </ul>
+        <section id="mid2" class="equipment">
+            <h2>Equipment & Supplies</h2>
+            <div>
+                <p>Multi-stitch Sewing Machines</p>
+                <p>4-Thread Serger</p>
+                <p>Industrial Sewing Machines</p>
+                <p>Cutting Mats</p>
+                <p>Fabric Scissors and Knives</p>
+                <p>Pins and Needles</p>
+                <p>Iron and Ironing Board</p>
+                <p>Assortment of Fabrics</p>
+                <p>...and more!</p>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>
-            Materials: <strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.
-        </p>
-        <p>
-            This is a student project, not an official ATLAS website. Made by AI (Actual Intelligence)
-        </p>
-    </footer>
+    <div class="full_bar">
+        <footer>
+            <p>
+                Materials: <strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.
+            </p>
+            <p>
+                This is a student project, not an official ATLAS website. Made by AI (Actual Intelligence)
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
