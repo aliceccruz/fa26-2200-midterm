@@ -2,9 +2,12 @@
 /* CSS Reset and Base Styles */
 :root {
 /* Color Palette - 5 Core Colors */
-    --color-primary: #002382; /* True Cobalt - Main Brand Color */
-    --color-secondary: #007C8A;   /* Teal - Complementary Action Color */
-    --color-accent: #B64377;  /* Berry Crush - Highlight / Warning Color */
+    /*--color-primary: #002382; True Cobalt - Main Brand Color */
+    /*--color-secondary: #007C8A; Teal - Complementary Action Color */
+    /*--color-accent: #B64377; Berry Crush - Highlight / Warning Color */
+    --color-primary: #1B1B7f;
+    --color-secondary: #1B6B6f;
+    --color-accent: #9B1B5f;
     --color-neutral: #1B1B3f; /* Carbon Black - Neutral Text and Background */
     --color-highlight: #F9C80E;   /* Bright Amber - Accent / Attention Color */
 
@@ -18,7 +21,7 @@
     --color-cnc:#275eaa;
 
 /* Derived Colors for Flexibility */
-    --color-background: color-mix(in srgb, var(--color-neutral) 20%, white);
+    --color-background: color-mix(in srgb, var(--color-neutral) 15%, white);
     --color-shadow: rgba(27,27,30,0.75);
     --color-text-dark: var(--color-neutral);
     --color-text-light: --color-background;
@@ -51,6 +54,22 @@ nav, section, footer, .color_code {
     border-color: var(--color-neutral);
     border-radius: var(--radius-md);
     box-shadow: 0px 8px 16px 0px var(--color-shadow);
+}
+
+a {
+    color: var(--color-primary)
+}
+
+a:visited {
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-secondary)
+}
+
+ul {
+    font-family: var(--font-secondary);
 }
 
 .full_bar {
@@ -197,10 +216,14 @@ header h2 {
 
 header h2 p {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-sm);
     margin: 1em;
+}
+
+.color_sub {
+    font-size: 0.75em;
 }
 
 main {
@@ -209,17 +232,30 @@ main {
     justify-content: center;
     align-items: center;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-        "description description description"
-        "use img img"
-        "equipment img img";
+        "lt lt lt"
+        "m1 img img"
+        "m2 img img"
+        "lb lb lb";
 
     margin: var(--spacing-lg) var(--spacing-lg);
 }
 
-#description {
-    grid-area: description;
+#longtop {
+    grid-area: lt;
+}
+
+#mid1 {
+    grid-area: m1;
+}
+
+#mid2 {
+    grid-area: m2;
+}
+
+#longbot {
+    grid-area: lb;
 }
 
 main img {
@@ -232,14 +268,6 @@ main img {
     border-color: var(--color-neutral);
     border-radius: var(--radius-md);
     box-shadow: 0px 8px 16px 0px var(--color-shadow);
-}
-
-#use {
-    grid-area: use;
-}
-
-#equipment {
-    grid-area: equipment;
 }
 
 main h2 {
@@ -258,14 +286,14 @@ main p, footer p {
     font-size: 1em;
 }
 
-#equipment div {
+.equipment div {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, auto);
     margin-bottom: 1em;
 }
 
-#equipment p {
+.equipment p {
     display: block;
     box-sizing: border-box;
     width: fit-content;
@@ -300,11 +328,20 @@ main p, footer p {
 }
 
 .wood_body {
-    background-image: linear-gradient(to bottom, var(--color-woodshop) 20%, var(--color-neutral));
+    background-image: linear-gradient(to bottom, var(--color-woodshop), var(--color-neutral));
 }
 
 .wood_main h2{
     color: var(--color-woodshop);
+}
+
+.wood_key{
+    display: inline-block;
+    background-color: var(--color-woodshop);
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px solid var(--color-neutral);
+    border-radius: var(--radius-md);
 }
 
 .sew_body {
@@ -496,4 +533,8 @@ nav a:visited {
         margin-right: var(--spacing-norm);
         row-gap: 1em;
     }
+}
+
+@media (max-width: 1200px) {
+    /* This is here to make swapping sizes on inspector easier, it does nothing */
 }
