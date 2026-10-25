@@ -46,6 +46,7 @@
 body {
     font-family: var(--font-primary), var(--font-secondary);
     margin: 0px;
+    background-color: #819FB4;
 }
 
 nav, section, footer, .color_code {
