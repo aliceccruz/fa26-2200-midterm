@@ -298,6 +298,16 @@ main {
     margin: var(--spacing-lg) var(--spacing-lg);
 }
 
+.print_main {
+    justify-content: stretch;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "lt lt"
+        "m1 img"
+        "m2 img"
+        "lb img";
+}
 main h2 {
     display: inline-block;
     padding: 0.25em 0.5em;
