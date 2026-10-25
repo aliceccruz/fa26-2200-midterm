@@ -227,8 +227,12 @@ header h2 p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-sm);
+    gap:0.5em;
     margin: 1em;
+}
+
+header h2 span {
+    flex-shrink: 0;
 }
 
 .color_sub {
@@ -267,7 +271,7 @@ main {
     grid-area: lb;
 }
 
-main img {
+.spaces_img {
     grid-area: img;
     box-sizing: border-box;
     width: 100%;
@@ -337,8 +341,8 @@ main p, footer p {
 .tool_key1{
     display: inline-block;
     background-color: color-mix(in srgb, var(--color-tools) 60%, var(--color-neutral));
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 }
@@ -346,8 +350,8 @@ main p, footer p {
 .tool_key2{
     display: inline-block;
     background-color: var(--color-tools);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 }
@@ -363,8 +367,8 @@ main p, footer p {
 .wood_key{
     display: inline-block;
     background-color: var(--color-woodshop);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 }
@@ -380,8 +384,8 @@ main p, footer p {
 .sew_key {
     display: inline-block;
     background-color: var(--color-sewing);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 
@@ -398,11 +402,15 @@ main p, footer p {
 .electronics_key {
     display: inline-block;
     background-color: var(--color-electronics);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 
+}
+
+.electronics_body header p {
+    justify-content: start;
 }
 
 .lasers_body {
@@ -416,8 +424,8 @@ main p, footer p {
 .laser_key {
     display: inline-block;
     background-color: var(--color-laser);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 
@@ -434,8 +442,8 @@ main p, footer p {
 .print_key {
     display: inline-block;
     background-color: var(--color-print);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 
@@ -452,11 +460,15 @@ main p, footer p {
 .cnc_key {
     display: inline-block;
     background-color: var(--color-cnc);
-    height: 1.5em;
-    width: 1.5em;
+    height: 36px;
+    width: 36px;
     border: 2px solid var(--color-neutral);
     border-radius: var(--radius-md);
 
+}
+
+.staff-page {
+    background-image: repeating-linear-gradient(to bottom, var(--color-laser), var(--color-sewing), var(--color-tools), var(--color-electronics), var(--color-cnc), var(--color-print), var(--color-woodshop), var(--color-laser) 25%);
 }
 
 #logo:hover {
@@ -496,6 +508,18 @@ nav a:visited {
 }
 
 /* -----Special Pages----- */
+
+body:not([class]) main img {
+    grid-area: img;
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-bottom: 2px solid;
+    border-color: var(--color-neutral);
+    box-shadow: 0px 8px 16px 0px var(--color-shadow);
+}
+
 .rules-page main {
     display: grid;
     grid-template-columns: 1fr;
@@ -532,6 +556,24 @@ nav a:visited {
     color: color-mix(in srgb, var(--color-neutral) 20%, white);
 }
 
+.staff-page main section:not(.info-card) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.staff-page  main  section:not(.info-card)  h2 {
+    width: 100%;
+    margin: 0px;
+    padding: 0.5em 0px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.staff-page main h3, .staff-page main h4{
+    margin-left: 1em;
+    margin-top: 0px;
+}
+
 .staff-page main {
     display: grid;
     grid-template-columns: 1fr;
@@ -542,18 +584,27 @@ nav a:visited {
 }
 .staff-page .info-card {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5 rem;
+    gap: 1.5rem;
 }
 .staff-page .info-card img {
-    width: 30%;
-    max-width: 350px;
-    height: 400px;
+    max-width: 25%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: var(--color-neutral);
+    box-shadow: 0px 8px 16px 0px var(--color-shadow);
+    margin-right:1em;
 }
+
+.staff-page main .info-card:nth-child(27) img{ /* with the normal styling, this one hits the border of it's container, so it;s shrunk a little */
+    width: 30%;
+    height: 220px;
+}
+
+
 
 
 /* Media Queries for Mobile Design */
@@ -606,6 +657,10 @@ nav a:visited {
     header h2 {
         font-size: 1.25em;
     }
+
+    header h2 p {
+        text-align: center;
+    }
     
     main {
         display: flex;
@@ -623,6 +678,22 @@ nav a:visited {
         margin-left: var(--spacing-norm);
         margin-right: var(--spacing-norm);
         row-gap: 1em;
+    }
+
+    .staff-page .info-card {
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .staff-page .info-card img {
+        max-width: 90%;
+        margin-right: 0px;
+        margin-bottom: 1em;
+    }
+
+    .staff-page main .info-card:nth-child(27) img{ /* with the normal styling, this one hits the border of it's container, so it;s shrunk a little */
+        width: 30%;
+        height: auto;
     }
 }
 
