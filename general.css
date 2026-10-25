@@ -604,9 +604,6 @@ body:not([class]) main img {
     height: 220px;
 }
 
-.help-us h2{
-    color: color-mix(in srgb, var(--color-neutral) 20%, white);
-}
 
 
 
